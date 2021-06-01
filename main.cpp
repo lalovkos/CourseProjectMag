@@ -55,6 +55,7 @@ protected:
 
 
 
+	//Бесполезный коммент
 
 
 	double Right_function(int num_elem) {
