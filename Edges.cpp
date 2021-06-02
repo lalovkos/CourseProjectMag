@@ -4,6 +4,7 @@
 Edge::Edge(const int first, const int second) {
 	firstPoint = first;
 	secondPoint = second;
+	EdgeNumber = 0;
 }
 
 void Edge::SetFirst(const int first) {
@@ -30,9 +31,15 @@ int Edge::GetEdgeNumber() {
 }
 
 
-size_t Edge::EdgesHasher::operator()(const Edge& edge) const
-{
+size_t Edge::EdgesHasher::operator()(const Edge& edge) const {
 	size_t xHash = std::hash<int>()(edge.firstPoint);
 	size_t yHash = std::hash<int>()(edge.secondPoint);
 	return xHash ^ yHash;
+}
+
+bool Edge::operator==(const Edge& otherEdge) const{
+	if ((this->firstPoint == otherEdge.firstPoint && this->secondPoint == otherEdge.secondPoint) ||
+		(this->firstPoint == otherEdge.secondPoint && this->secondPoint == otherEdge.firstPoint))
+		return true;
+	else return false;
 }

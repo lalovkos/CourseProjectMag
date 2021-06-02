@@ -5,11 +5,10 @@
 class Edge {
 	private: 
 		int EdgeNumber;
-
-	public:
-		//TODO: Перенести в private
 		int firstPoint;
 		int secondPoint;
+
+	public:	
 
 		Edge(const int first, const int second);
 		void SetFirst(const int first);
@@ -19,13 +18,7 @@ class Edge {
 		void SetEdgeNumber(const int number);
 		int GetEdgeNumber();
 
-		bool operator==(const Edge& otherEdge) const
-		{
-			if ((this->firstPoint == otherEdge.firstPoint && this->secondPoint == otherEdge.secondPoint) || 
-			    (this->firstPoint == otherEdge.secondPoint && this->secondPoint == otherEdge.firstPoint))
-				return true;
-			else return false;
-		}
+		bool operator==(const Edge& otherEdge) const;
 
 		struct EdgesHasher {
 			size_t operator()(const Edge& edge) const;
