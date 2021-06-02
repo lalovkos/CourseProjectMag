@@ -21,9 +21,15 @@
     <ClCompile Include="Solve.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Edges.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Edges.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

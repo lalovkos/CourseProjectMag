@@ -1,4 +1,5 @@
-#include"Header.h"
+#include "Header.h"
+#include "Edges.h"
 #define _CRT_SECURE_NO_WARNINGS
 #define PI 3.1415926
 
@@ -56,8 +57,6 @@ protected:
 
 
 	//Бесполезный коммент
-
-
 	double Right_function(int num_elem) {
 		if (Material[num_elem] == 1)
 			return 0;
@@ -188,7 +187,6 @@ public:
 int main() {
 	int ktr = 946, kuzlov = 1012, kt1 = 90;
 
-
 	vector<pair<double, double>> Gridelem(kuzlov);
 	vector<int> Materials(ktr);
 	vector<rect> Glob_num(ktr);
@@ -198,6 +196,21 @@ int main() {
 	vector<double> Right;
 
 	vector<vector<double>> Matrix;
+	
+	unordered_set <Edge, Edge::EdgesHasher> EdgeSet;
+	unordered_set<Edge, Edge::EdgesHasher>::const_iterator got;
+	Edge ed1 = Edge(1, 2);			
+	EdgeSet.insert(ed1);			  //Добавление
+	got = EdgeSet.find(Edge(2, 1));   //Поиск     
+	if (got == EdgeSet.end()) {      
+		std::cout << "Not found";
+	}
+	else {
+		std::cout << "found";
+	}
+
+	return 0; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Ранний выход!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 	MFE MyMFE(Gridelem, Glob_num, Materials, l1);
 	MyMFE.get_solve(Right, Matrix);
 
@@ -210,7 +223,6 @@ int main() {
 	system("pause");
 
 }
-
 
 
 //void init() {

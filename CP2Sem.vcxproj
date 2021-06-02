@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Edges.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Solve.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Edges.h" />
     <ClInclude Include="Header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
