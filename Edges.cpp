@@ -1,6 +1,5 @@
 #include "Edges.h"
 
-
 Edge::Edge(const int first, const int second) {
 	firstPoint = first;
 	secondPoint = second;
@@ -10,6 +9,7 @@ Edge::Edge(const int first, const int second) {
 void Edge::SetFirst(const int first) {
 	firstPoint = first;
 }
+
 int Edge::GetFirst() {
 	return firstPoint;
 }
