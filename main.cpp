@@ -208,7 +208,7 @@ int main() {
 	else {
 		std::cout << "found";
 	}
-
+	std::cout << "sdsd";
 	return 0; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Ранний выход!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 	MFE MyMFE(Gridelem, Glob_num, Materials, l1);

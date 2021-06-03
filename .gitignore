@@ -32,5 +32,5 @@
 *.out
 *.app
 
-#Debug folder
-Debug/
+# Debug folder
+Debug/*
